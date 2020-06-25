@@ -34,13 +34,16 @@
     *Einstellungen => Systemsteuerung => Allgemeine Einstellungen => Info-LED*  
     Servicemeldungen  
     Alarmmeldungen  
-    *Programme & Verknüpfungen =< Neu*  
-    ![](https://www.verdrahtet.info/wp-content/uploads/2020/06/ccu_led_1.png)
+    *Programme & Verknüpfungen => Neu*  
+    ![](images/hm/led_prog.png)
     ##### Firewall
     Einstellungen => Systemsteuerung => Firewall konfigurieren
+    
     ![Firewalleinstellungen](images/hm/firewall.png "Firewalleinstellungen")
   - Pi-Hole
   - ioBroker
+  - USV  
+    [USV mit ioBroker](https://bloggerbu.de/usv-iobroker/)
   
 - Flashen von China-Cloud-Geräten
   - Tasmota
