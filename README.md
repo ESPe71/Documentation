@@ -25,6 +25,7 @@
     - SD
     - SSD
   - Homematic mit Raspberrymatic  
+  
     ##### LED ein-/ausschalten
     *Programme & Verknüpfungen => Skript testen*
     ```
@@ -40,6 +41,22 @@
     Einstellungen => Systemsteuerung => Firewall konfigurieren
     
     ![Firewalleinstellungen](images/hm/firewall.png "Firewalleinstellungen")
+    
+    ##### Update-URLs
+    
+    |CCU|URL
+    |---|----
+    |ccu2|https://update.homematic.com/firmware/download?cmd=js_check_version&version=2.22.22&product=HM-CCU2&serial=NEQ7777777
+    |ccu3|http://update.homematic.com/firmware/download?cmd=js_check_version&version=3.22.22&product=HM-CCU3&serial=NEQ7777777
+    |RaspberryMatic|https://raspberrymatic.de/LATEST-VERSION.js
+    |pivccu2|https://www.pivccu.de/pivccu.latestVersion?serial=ioBroker
+    |pivccu3|https://www.pivccu.de/pivccu3.latestVersion?serial=ioBroker
+    |debimatic|https://www.debmatic.de/latestVersion?serial=ioBroker
+    |testing_pivccu|https://www.pivccu.de/pivccu.latestVersion?serial=ioBroker
+    |testing_pivccu3|https://www.pivccu.de/pivccu3.latestVersion?serial=ioBroker
+    |testing_debimatic|https://www.debmatic.de/latestVersion?serial=ioBroker
+
+    
   - Pi-Hole
   - ioBroker
   - USV  
