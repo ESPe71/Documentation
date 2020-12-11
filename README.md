@@ -56,6 +56,25 @@
     |testing_pivccu3|https://www.pivccu.de/pivccu3.latestVersion
     |testing_debimatic|https://www.debmatic.de/latestVersion
 
+    ##### Fehlende Systemvariablen (Servicemeldungen, Alarmmeldungen, Anwesenheit)
+    Falls die o.g. Systemvariablen nicht vorhanden sind, oder nur irgendwelche andere unbekannte, kann man sie sich mit Hilfe eines Skriptes anzeigen lassen und wahrscheinlich auch wiederherstellen.
+    ```
+    ! Servicemeldungen
+    WriteLine(dom.GetObject(41).Name());
+    ! Alarmmeldungen
+    WriteLine(dom.GetObject(40).Name());
+    ! Anwesenheit
+    WriteLine(dom.GetObject(950).Name());
+    ```
+    In der Ausgabe sollten nun die entsprechenden Systemvariablen aufgelistet werden. Sollte dies nicht der Fall sein, dann kann man die Namen der Systemvariablen wie folgt wiederherstellen:
+    ```
+    ! Servicemeldungen
+    WriteLine(dom.GetObject(41).Name("Servicemeldungen"));
+    ! Alarmmeldungen
+    WriteLine(dom.GetObject(40).Name("Alarmmeldungen"));
+    ! Anwesenheit
+    WriteLine(dom.GetObject(950).Name("Anwesenheit"));
+    ```
     
   - Pi-Hole
   - ioBroker
