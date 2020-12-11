@@ -81,4 +81,5 @@
 - https://github.com/raspberrypi/rpi-eeprom/tree/master/firmware/beta  
 - https://jensmueller.one/amazon-link-generator/
 - https://www.trojaner-board.de/96344-anleitung-cleanup-massnahmen-absicherung-rechners.html#post627442
+- https://github.com/Baenker/Pruefung-CCU-Firmware/blob/master/CCU-Firmware.js
   
