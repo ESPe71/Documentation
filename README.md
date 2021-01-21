@@ -99,7 +99,9 @@ Once the installation process has finished, reboot the Pi by entering in sudo re
     WriteLine(dom.GetObject(950).Name("Anwesenheit"));
     ```
     
-  - Pi-Hole
+  - Pi-Hole  
+  ```curl -sSL https://install.pi-hole.net | bash```
+    - [Blocklisten](https://firebog.net/)
   - [ioBroker](https://technikkram.net/blog/2020/11/16/io-broker-auf-dem-raspberry-pi-installieren/)
   - USV  
     [USV mit ioBroker](https://bloggerbu.de/usv-iobroker/)
