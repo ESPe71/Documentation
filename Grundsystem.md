@@ -105,6 +105,10 @@ Die Pinbezeichnung ist  kann man mit ``gpio readall`` in der Spalte wPi ablesen.
 
 ## Referenzen
 [Raspberry Pi Pinout](https://keytosmart.com/single-board-computers/raspberry-pi-4-gpio-pinout/)
+
 [GPIO mit "wiringPi"](https://www.elektronik-kompendium.de/sites/raspberry-pi/2202111.htm)
+
 [Unofficial mirror and ports of WiringPi](https://github.com/WiringPi)
+
 [wiringPi update 2.52](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/)
+
