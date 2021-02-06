@@ -24,28 +24,6 @@
   - Grundsystem mit Rasbian
     - SD
     - SSD
-```
-Overall, updating your Pi 4’s OS is simple and straightforward. An overview of the steps are as follows:
-
-Ensure you’re connected to a stable internet connection.
-
-Check what version of firmware your Pi 4 is running to see if you need to update it. You can do this by opening a new terminal window and entering the command 
-```
-sudo rpi-eeprom-update.
-```
-
-If an update is required, install the latest software for the Raspberry Pi 4 by first running the command sudo apt upgrade, and after that has completed, run 
-```
-sudo apt full-upgrade.
-```
-
-Next, update and install the latest firmware by entering in the command 
-```
-sudo apt install rpi-eeprom.
-```
-
-Once the installation process has finished, reboot the Pi by entering in sudo reboot.
-```
 
   - Homematic mit Raspberrymatic  
   
