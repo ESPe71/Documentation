@@ -43,6 +43,54 @@ sudo apt full-upgrade
 sudo apt install rpi-eeprom
 ```
 
+## Zusätzliche Software
+
+### Git
+
+```
+sudo apt install git-core
+git --version
+```
+
+### WiringPi
+
+> [WiringPi ist deprecated](http://wiringpi.com/wiringpi-deprecated/), aber immer noch nützlich.
+
+```
+sudo apt install wiringpi
+```
+Testen mit 
+```
+gpio -v
+gpio readall
+```
+
+#### Alternative Installation
+
+Falls es zu einem Fehler mit ``gpio readall`` kommt, kann man wiringPi auch aus alternativen Quellen installieren.
+
+Vorher ist wiringPi zu deinstallieren.
+
+```
+sudo apt remove wiringpi
+```
+
+```
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+```
+
+#### Grundlegende Möglichkeiten
+
+```
+gpio readall
+gpio mode 25 OUTPUT
+gpio read 25
+gpio write 25 1
+gpio write 25 0
+```
+
+Die Pinbezeichnung ist  kann man mit ``gpio readall`` in der Spalte wPi ablesen.
 
 ## SSD-Hardware
 > [USB 3.0 zu SATA Konverter](https://amzn.to/2Z4jpFb)
@@ -57,5 +105,5 @@ sudo apt install rpi-eeprom
 
 ## Referenzen
 [Raspberry Pi Pinout](https://keytosmart.com/single-board-computers/raspberry-pi-4-gpio-pinout/)
-
+[GPIO mit "wiringPi"](https://www.elektronik-kompendium.de/sites/raspberry-pi/2202111.htm)
 
