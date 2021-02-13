@@ -92,6 +92,24 @@ gpio write 25 0
 
 Die Pinbezeichnung ist  kann man mit ``gpio readall`` in der Spalte wPi ablesen.
 
+### Python
+
+Achtung, in den meisten Fällen, wenn Python schon installiert ist, wurden zwei Pythonversionen installiert. Python2 und Python3.  
+Die Version 2 wird mit ``python`` angesprochen, die Version 3 mit ``python3``.
+Falls man dieses Kommando eingibt, kommt man in den Python-Interpreter, bei dem die Version am Anfang mit ausgegeben wird. Die aktuelle Version kann man auch mit
+``python --version`` bzw. ``python3 --version`` ermitteln.
+
+Falls python in der Version 3 noch nicht installiert ist:
+```
+sudo apt install python3
+```
+
+Wenn man Python 2 nicht benötigt, kann man es auch deinstallieren.
+```
+sudo apt remove python
+sudo apt autoremove
+```
+
 
 ## Referenzen
 [Raspberry Pi Pinout](https://keytosmart.com/single-board-computers/raspberry-pi-4-gpio-pinout/)
