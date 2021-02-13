@@ -52,15 +52,18 @@ __IP-Adressen für den eingeschränkten Zugriff__ hier wird die IP-Adresse der i
 
 ### LED ein-/ausschalten
 
+#### Datei
 Um die LEDs auszuschalten legt man eine Datei an. ``Programme & Verknüpfungen`` ==> ``Skript testen``
 ```
 system.Exec("rm /etc/config/disableLED");
 system.Exec("touch /etc/config/disableLED");
 ```
 
+#### WebUI
 Über die WebUI kann man das gleiche Ergebnis auch erreichen: ``Einstellungen`` ==> ``Systemsteuerung`` ==> ``Allgemeine Einstellungen`` unter dem Punkt ``Info-LED`` 
 kann man die LEDs für Servicemeldungen und Alarmmeldungen jeweils getrennt voneinander ein- oder ausschalten.
 
+#### Zeitgesteuertes ein-/ausschalten
 Möchte man zeitgesteuert die LEDs ein- bzw. ausschalten, kann man dies mit Hilfe eines Programmes erreichen.  
 ``Programme & Verknüpfungen`` ==> ``Neu``  
 ![](images/hm/led_prog.png)  
