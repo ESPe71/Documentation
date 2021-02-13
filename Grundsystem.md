@@ -109,6 +109,8 @@ Falls python in der Version 3 noch nicht installiert ist:
 ```
 sudo apt install python3
 sudo apt install python3-pip
+pip3 install RPi.GPIO
+pip3 install gpiozero
 ```
 Die zweite Zeile installiert PIP für Python3. Mit Pip kann man Module für Python3 installieren und entfernen.
 
@@ -121,6 +123,8 @@ Die zweite Zeile installiert PIP für Python3. Mit Pip kann man Module für Pyth
 [Unofficial mirror and ports of WiringPi](https://github.com/WiringPi)
 
 [wiringPi update 2.52](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/)
+
+[Python-Modul GPIO-Zero](https://gpiozero.readthedocs.io/en/stable/index.html)
 
 ### SSD-Hardware
 > [USB 3.0 zu SATA Konverter](https://amzn.to/2Z4jpFb)
