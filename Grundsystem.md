@@ -99,16 +99,18 @@ Die Version 2 wird mit ``python`` angesprochen, die Version 3 mit ``python3``.
 Falls man dieses Kommando eingibt, kommt man in den Python-Interpreter, bei dem die Version am Anfang mit ausgegeben wird. Die aktuelle Version kann man auch mit
 ``python --version`` bzw. ``python3 --version`` ermitteln.
 
-Falls python in der Version 3 noch nicht installiert ist:
-```
-sudo apt install python3
-```
-
 Wenn man Python 2 nicht benötigt, kann man es auch deinstallieren.
 ```
 sudo apt remove python
 sudo apt autoremove
 ```
+
+Falls python in der Version 3 noch nicht installiert ist:
+```
+sudo apt install python3
+sudo apt install python3-pip
+```
+Die zweite Zeile installiert PIP für Python3. Mit Pip kann man Module für Python3 installieren und entfernen.
 
 
 ## Referenzen
