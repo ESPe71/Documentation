@@ -102,3 +102,14 @@ WriteLine(dom.GetObject(40).Name("Alarmmeldungen"));
 ! Anwesenheit
 WriteLine(dom.GetObject(950).Name("Anwesenheit"));
 ```
+
+### HomeMatic IP Dimmer für Markenschalter mit letztem Dimmwert einschalten
+Es gibt keine Einstellung, dass beim Einschalten mit dem letzten Dimmwert erfolgen soll. 
+
+Beim Anlegen des Aktors, werden jedoch zwei Direktverknüpfungen mit den Tastern erstellt. Dort kann man den Pegel im Zustand ein anpassen.
+
+
+
+## Resourcen
+
+- [HomeMatic IP Dimmer für Markenschalter mit letztem Dimmwert einschalten](https://homematic.simdorn.net/dimmer-mit-letztem-dimmwert-einschalten/)
