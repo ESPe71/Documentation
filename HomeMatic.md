@@ -112,4 +112,5 @@ Beim Anlegen des Aktors, werden jedoch zwei Direktverknüpfungen mit den Tastern
 
 ## Resourcen
 
+- [Expertenmodus vom Experten erklärt (65min)](https://www.youtube.com/watch?v=1B4iwtK1Rmo)
 - [HomeMatic IP Dimmer für Markenschalter mit letztem Dimmwert einschalten](https://homematic.simdorn.net/dimmer-mit-letztem-dimmwert-einschalten/)
