@@ -109,8 +109,8 @@ Falls python in der Version 3 noch nicht installiert ist:
 ```
 sudo apt install python3
 sudo apt install python3-pip
-pip3 install RPi.GPIO
-pip3 install gpiozero
+sudo pip3 install RPi.GPIO
+sudo pip3 install gpiozero
 ```
 Die zweite Zeile installiert PIP für Python3. Mit Pip kann man Module für Python3 installieren und entfernen.
 
