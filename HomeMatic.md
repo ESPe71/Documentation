@@ -60,11 +60,14 @@ WiringPi ist bei einer RaspberryMatic standardmäßig vorhanden. Daher kann man 
 Vier zusätzliche LEDs (grün, gelb, rot, blau) wurden angebracht.
 
 | LED-Farbe | Funktion                 | PIN |
-|-----------|--------------------------|-----|
+|-----------|--------------------------|:---:|
 | Grün      | Herzschlag bzw. Update   | 29  |
 | Gelb      | Servicemeldung vorhanden | 23  |
 | Rot       | Alarmmeldung vorhanden   | 24  |
 | Blau      | Duty-Cycle höher als 5%  | 25  |
+
+<sup>WiringPi Pinbelegung wird verwendet.</sup>
+
 
 Die LEDs wurden mit 220Ω Widerständen versehen und am gemeinsamen GND-Pin in der Nähe verbunden.  
 Schalten kann man dann einfach mit fogendem Skript:
