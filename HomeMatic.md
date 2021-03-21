@@ -9,6 +9,7 @@ Eine [Dokumentation](https://github.com/jens-maus/RaspberryMatic/wiki) gibt es a
 ## Systemhandlungen
 
 ### Installation
+Die [Installation](https://github.com/jens-maus/RaspberryMatic/wiki/Installation-RaspberryPi) beschreibt Jens Maus auf seinen Wiki-Seiten.
 
 Auf dem [Github-Account von Jens Maus](https://github.com/jens-maus/RaspberryMatic/releases) kann man sich die aktuelle Version herunterladen.
 Diese wird dann auf eine SD-Karte mit ``dd``, ``Win32DiskImager`` oder ``BalenerEtcher`` geflasht. Eine SSD macht hier keinen Sinn, da der 
