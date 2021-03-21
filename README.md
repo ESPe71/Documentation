@@ -40,6 +40,14 @@
     Einstellungen => Systemsteuerung => Firewall konfigurieren
     
     ![Firewalleinstellungen](images/hm/firewall.png "Firewalleinstellungen")
+    
+    [WLAN-Konfiguration](https://homematic-forum.de/forum/viewtopic.php?f=65&t=26917#WLAN)
+    
+    [LAN-Gateway](https://homematic-forum.de/forum/viewtopic.php?f=65&t=26917#LAN-Gateway)
+    \- [als Video](https://www.youtube.com/watch?v=KM0sc1H75DI&t=96s)
+    
+    [USV-Client](https://homematic-forum.de/forum/viewtopic.php?f=65&t=26917#NUT)
+    
   - Pi-Hole
   - ioBroker
   - USV  
