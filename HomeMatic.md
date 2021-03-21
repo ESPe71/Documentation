@@ -56,7 +56,8 @@ __IP-Adressen für den eingeschränkten Zugriff__ hier wird die IP-Adresse der i
 
 ### Zusätzliche LEDs
 
-WiringPi ist bei einer RaspberryMatic standardmäßig vorhanden. Daher kann man leicht LEDs ansteuern um verschiedene Zustände direkt im Schrank anzuzeigen und es wurden vier zusätzliche LEDs (grün, gelb, rot, blau) angebracht.
+WiringPi ist bei einer RaspberryMatic standardmäßig vorhanden. Daher kann man leicht LEDs ansteuern um verschiedene Zustände direkt im Schrank anzuzeigen.  
+Vier zusätzliche LEDs (grün, gelb, rot, blau) wurden angebracht.
 
 | LED-Farbe | Funktion                 | PIN |
 |-----------|--------------------------|-----|
@@ -196,7 +197,7 @@ system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &std
 #### LED-Duty Cycle
 
 Als Bedingung wird hier Systemzustand ``DutyCycle`` mit Wert größer als 5% bei Änderung auslösen  
-ODER
+__ODER__  
 Systemzustand ``DutyCycle-LAN-Gateway`` mit Wert größer als 5% bei Änderung auslösen gesetzt.
 
 Als Aktivität wird  
