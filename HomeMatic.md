@@ -4,6 +4,8 @@ HomeMatic- und HomeMatic IP-Geräte steuere ich mithilfe von RaspberryMatic auf 
 Da ich mein Pi in einem Netzwerkschrank eingebaut habe, wurde das Funkmodul mittels USB (HB-RF-USB) abgesetzt und außerhalb des Schrankes platziert. 
 Zusätzlich wird noch eine externe Antenne verwendet.
 
+Eine [Dokumentation](https://github.com/jens-maus/RaspberryMatic/wiki) gibt es auf den Wiki-Seiten von Jens Maus.
+
 ## Systemhandlungen
 
 ### Installation
