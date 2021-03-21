@@ -75,10 +75,150 @@ integer value = 1;
 
 system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
 ```
-Für ``pin`` wird der jeweilige Pin der LED angegeben und der Wert beim ``value`` zum einschalten auf ``1``, zum ausschalten auf ``0`` gesetzt.
+Für ``pin`` wird der jeweilige Pin der LED angegeben und der Wert beim ``value`` zum einschalten auf ``1``, zum ausschalten auf ``0`` gesetzt.  
+Die Pins 23, 24, 25 sind Defaultmäßig Eingangspins, so dass der Mode vorher auf Ausgang gesetzt werden muß.
 
 Mehrere Programme wurden angelegt:  
 ![](images/hm/programme.png)  
+
+#### HeartBeat
+
+Die grüne LED soll alle zwei Sekunden kurz aufblinken, um anzuzeigen, dass alles in Ordnung ist. Falls ein Update existiert, soll die grüne LED jeweils eine Sekunde an- und wieder ausgehen. Dazu wurden zwei Programme erstellt, die je nach Updatesituation, aktiviert bzw. deaktiviert sind. Nur eines der beiden ist jeweils aktiv. Um das jeweilige Programm zu aktivieren bzw. zu deaktivieren, wurde ein drittes Programm erstellt. Dieses Programm prüft zyklisch auf das vorhandensein eines Updates und aktiviert bzw. deaktiviert daraufhin die beiden Programme.
+
+___HeartBeat___
+
+Lässt die grüne LED in 2 Sekundenabständen kurz aufblinken.
+
+Als Bedingung wird hier eine Zeitsteuerung verwendet: ``Zeitspanne``: ``Ganztägig``; ``Zeitintervall``: ``Alle 2 Sekunden``.
+
+Als Aktivität wird dann sofort folgendes Skript ausgeführt:
+```
+system.Exec("gpio write 29 1");
+system.Exec("gpio write 29 0");
+```
+
+___HeartBeatUpdate___
+
+Lässt die grüne LED in 1 Sekundenabständen blinken, um zu signalisieren, dass ein Update existiert.
+
+Als Bedingung wird hier eine Zeitsteuerung verwendet: ``Zeitspanne``: ``Ganztägig``; ``Zeitintervall``: ``Alle 2 Sekunden``.
+
+Vor dem Ausführen müssen alle laufenden Verzögerungen für diese Aktivitäten beendet werden.
+Als Aktivitäten werden dann folgende zwei Skripte ausgeführt:  
+Sofort:
+```
+system.Exec("gpio write 29 1");
+```
+Verzögert um 1 Sekunde:
+```
+system.Exec("gpio write 29 0");
+```
+
+___HeartBeatUpdateTest___
+
+Prüft, ob ein Update existiert um dann HeartBeat oder HeartBeatUpdate zu aktivieren.
+
+Als Bedingung wird hier eine Zeitsteuerung verwendet: ``Zeitspanne``: ``Ganztägig``; ``Zeitintervall``: ``Alle 3 Stunden``.
+
+Als Aktivität wird dann sofort folgendes Skript ausgeführt:
+```
+string stdout;
+string stderr;
+string updateURL = "https://raspberrymatic.de/LATEST-VERSION.js";
+
+system.Exec("wget -q -O - " # updateURL, &stdout, &stderr);
+string latestVersion = stdout.StrValueByIndex("'", 1);
+WriteLine("Latest:  " # latestVersion);
+
+system.Exec("cat /boot/VERSION", &stdout, &stderr);
+string currentVersion = stdout.StrValueByIndex("=",1).StrValueByIndex("\n", 0);
+WriteLine("Current: " # currentVersion);
+
+if(latestVersion==currentVersion) {
+  dom.GetObject("HeartBeatUpdate").Active(false);
+  dom.GetObject("HeartBeat").Active(true);
+}
+else {
+  dom.GetObject("HeartBeat").Active(false);
+  dom.GetObject("HeartBeatUpdate").Active(true);  
+}
+```
+
+#### LED-Service
+
+Als Bedingung wird hier ein Systemzustand ``Servicemeldungen`` mit Wert ungleich 0 bei Änderungen auslösen verwendet.
+
+Als Aktivität wird  
+__Dann__ folgendes Skript sofort ausgeführt:
+```
+string stdout;
+string stderr;
+integer pin = 23;
+integer value = 1;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+__Sonst__ wird das Skript sofort ausgeführt:
+```
+string stdout;
+string stderr;
+integer pin = 23;
+integer value = 0;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+
+
+#### LED-Alarm
+
+Als Bedingung wird hier ein Systemzustand ``Alarmmeldungen`` mit Wert ungleich 0 bei Änderungen auslösen verwendet.
+
+Als Aktivität wird  
+__Dann__ folgendes Skript sofort ausgeführt:
+```
+string stdout;
+string stderr;
+integer pin = 24;
+integer value = 1;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+__Sonst__ wird das Skript sofort ausgeführt:
+```
+string stdout;
+string stderr;
+integer pin = 24;
+integer value = 0;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+
+#### LED-Duty Cycle
+
+Als Bedingung wird hier Systemzustand ``DutyCycle`` mit Wert größer als 5% bei Änderung auslösen  
+ODER
+Systemzustand ``DutyCycle-LAN-Gateway`` mit Wert größer als 5% bei Änderung auslösen gesetzt.
+
+Als Aktivität wird  
+__Dann__ folgendes Skript sofort ausgeführt:
+```
+string stdout;
+string stderr;
+integer pin = 25;
+integer value = 1;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+__Sonst__ wird das Skript sofort ausgeführt:
+```
+string stdout;
+string stderr;
+integer pin = 25;
+integer value = 0;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+
 
 ## Nützliches
 
