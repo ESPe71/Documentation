@@ -51,6 +51,13 @@ __Homematic XML-RPC API__ muss auf ``Eingeschränkt`` für *rfd* (HomeMatic) (be
 
 __IP-Adressen für den eingeschränkten Zugriff__ hier wird die IP-Adresse der ioBroker-Installation angegeben.
 
+
+## Weitere Einstellung
+
+### Zusätzliche LEDs
+
+![](images/hm/programme.png)  
+
 ## Nützliches
 
 ### LED ein-/ausschalten
