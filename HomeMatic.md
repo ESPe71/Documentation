@@ -56,6 +56,28 @@ __IP-Adressen für den eingeschränkten Zugriff__ hier wird die IP-Adresse der i
 
 ### Zusätzliche LEDs
 
+WiringPi ist bei einer RaspberryMatic standardmäßig vorhanden. Daher kann man leicht LEDs ansteuern um verschiedene Zustände direkt im Schrank anzuzeigen und es wurden vier zusätzliche LEDs (grün, gelb, rot, blau) angebracht.
+
+| LED-Farbe | Funktion                 | PIN |
+|-----------|--------------------------|-----|
+| Grün      | Herzschlag bzw. Update   | 29  |
+| Gelb      | Servicemeldung vorhanden | 23  |
+| Rot       | Alarmmeldung vorhanden   | 24  |
+| Blau      | Duty-Cycle höher als 5%  | 25  |
+
+Die LEDs wurden mit 220Ω Widerständen versehen und am gemeinsamen GND-Pin in der Nähe verbunden.  
+Schalten kann man dann einfach mit fogendem Skript:
+```
+string stdout;
+string stderr;
+integer pin = 24;
+integer value = 1;
+
+system.Exec("gpio mode " # pin # " out && gpio write " # pin # " " # value, &stdout, &stderr);
+```
+Für ``pin`` wird der jeweilige Pin der LED angegeben und der Wert beim ``value`` zum einschalten auf ``1``, zum ausschalten auf ``0`` gesetzt.
+
+Mehrere Programme wurden angelegt:  
 ![](images/hm/programme.png)  
 
 ## Nützliches
