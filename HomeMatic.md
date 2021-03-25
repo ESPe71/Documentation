@@ -131,20 +131,25 @@ string stderr;
 string updateURL = "https://raspberrymatic.de/LATEST-VERSION.js";
 
 system.Exec("wget -q -O - " # updateURL, &stdout, &stderr);
-string latestVersion = stdout.StrValueByIndex("'", 1);
-WriteLine("Latest:  " # latestVersion);
+if(stdout.Length() > 0) {
+  string latestVersion = stdout.StrValueByIndex("'", 1);
+  WriteLine("Latest:  " # latestVersion);
 
-system.Exec("cat /boot/VERSION", &stdout, &stderr);
-string currentVersion = stdout.StrValueByIndex("=",1).StrValueByIndex("\n", 0);
-WriteLine("Current: " # currentVersion);
+  system.Exec("cat /boot/VERSION", &stdout, &stderr);
+  string currentVersion = stdout.StrValueByIndex("=",1).StrValueByIndex("\n", 0);
+  WriteLine("Current: " # currentVersion);
 
-if(latestVersion==currentVersion) {
-  dom.GetObject("HeartBeatUpdate").Active(false);
-  dom.GetObject("HeartBeat").Active(true);
+  if(latestVersion==currentVersion) {
+    dom.GetObject("HeartBeatUpdate").Active(false);
+    dom.GetObject("HeartBeat").Active(true);
+  }
+  else {
+    dom.GetObject("HeartBeat").Active(false);
+    dom.GetObject("HeartBeatUpdate").Active(true);  
+  }
 }
 else {
-  dom.GetObject("HeartBeat").Active(false);
-  dom.GetObject("HeartBeatUpdate").Active(true);  
+  WriteLine("Error wget");
 }
 ```
 
