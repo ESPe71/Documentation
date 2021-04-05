@@ -296,3 +296,8 @@ Beim Anlegen des Aktors, werden jedoch zwei Direktverknüpfungen mit den Tastern
 - [Pruefung CCU-Firmware](https://github.com/Baenker/Pruefung-CCU-Firmware/blob/master/CCU-Firmware.js)
 - [Expertenmodus vom Experten erklärt (Video 65min)](https://www.youtube.com/watch?v=1B4iwtK1Rmo)
 - [HomeMatic IP Dimmer für Markenschalter mit letztem Dimmwert einschalten](https://homematic.simdorn.net/dimmer-mit-letztem-dimmwert-einschalten/)
+- [Servicemeldungen \*allinclusive\* Script](https://homematic-forum.de/forum/viewtopic.php?t=24618)
+- [„Kommunikation gestört“ beheben](https://www.christian-luetgens.de/homematic/hardware/funkstoerungen/servicemeldungen/Servicemeldungen.htm)
+- [HM-DIS-WM55 Seitenweise blättern und Aktionen ausführen](https://homematic-forum.de/forum/viewtopic.php?f=31&t=23843)
+- [Freie Texte in Statusanzeige HM-Dis-WM55 über ein HM Script](https://homematic-forum.de/forum/viewtopic.php?t=21802)
+- [HM-Dis-WM55 Oled Display ansteuern](https://forum.iobroker.net/topic/2345/hm-dis-wm55-oled-display-ansteuern/12)
