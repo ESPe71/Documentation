@@ -2,11 +2,12 @@
 
 ## Installation
 
-1. NodeJS Repository hinzufügen  
-   ``curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash``
-2. NodeJS installieren  
+1. NodeJS Repository hinzufügen\
+   Die aktuelle LTS-Version kann man unter [https://deb.nodesource.com/](https://deb.nodesource.com/) ermitteln.\
+   ``curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash``
+3. NodeJS installieren  
    ``sudo apt install -y nodejs``
-3. ioBroker installieren  
+4. ioBroker installieren  
    ``curl -sL https://iobroker.net/install.sh | bash``
 
 > Es schadet sicher nicht, wenn man sich die Skripte die man aus dem Internet, in Punkt 1 und 3, ausführt, auch mal anschaut.
