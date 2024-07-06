@@ -1,7 +1,7 @@
 # HomeMatic
 
-HomeMatic- und HomeMatic IP-Geräte steuere ich mithilfe von RaspberryMatic auf einem Raspberry Pi4 2GB.  
-Da ich mein Pi in einem Netzwerkschrank eingebaut habe, wurde das Funkmodul mittels USB (HB-RF-USB) abgesetzt und außerhalb des Schrankes platziert. 
+HomeMatic- und HomeMatic IP-Geräte steuere ich mithilfe von RaspberryMatic ~~auf einem Raspberry Pi4 2GB~~ in einer Virtuellen Maschine (VM) auf Proxmox.  
+~~Da ich mein Pi in einem Netzwerkschrank eingebaut habe, wurde~~ das Funkmodul wurde mittels USB (HB-RF-USB) abgesetzt und außerhalb des Schrankes platziert. 
 Zusätzlich wird noch eine externe Antenne verwendet.
 
 Eine [Dokumentation](https://github.com/jens-maus/RaspberryMatic/wiki) gibt es auf den Wiki-Seiten von Jens Maus.
@@ -9,6 +9,8 @@ Eine [Dokumentation](https://github.com/jens-maus/RaspberryMatic/wiki) gibt es a
 ## Systemhandlungen
 
 ### Installation
+
+#### Rasbery Pi
 Die [Installation](https://github.com/jens-maus/RaspberryMatic/wiki/Installation-RaspberryPi) beschreibt Jens Maus auf seinen Wiki-Seiten.
 
 Auf dem [Github-Account von Jens Maus](https://github.com/jens-maus/RaspberryMatic/releases) kann man sich die aktuelle Version herunterladen.
@@ -17,6 +19,9 @@ Platzverbrauch nicht so hoch ist und die Wahrscheinlichkeit des versagens der SD
 
 Nachdem die SD-Karte eingelegt, der Pi gestartet und die IP ermittelt wurde, kann man auf die WebUI mittels Browser zugreifen. 
 Beim ersten Start wird man noch durch eine Grundkonfiguration geführt. Hier kann man die vorgeschlagenen Einstellungen verwenden.
+
+#### Proxmox
+Die [Installation](https://github.com/jens-maus/RaspberryMatic/wiki/Installation-Proxmox-VE) beschreibt Jens Maus auf seinen Wiki-Seiten sehr gut.
 
 ### Update
 
